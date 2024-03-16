@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="google-signin-client_id" content="593173091396-06aqd9jvejl77o0abtoqsuhps53al1pe.apps.googleusercontent.com" >
+
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+        <title>Home Property</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+        <!-- Theme color -->
+        <link id="switcher" href="%PUBLIC_URL%/css/theme-color/default-theme.css" rel="stylesheet">     
+        <!-- Main style sheet -->
+        <link href="%PUBLIC_URL%/css/style.css" rel="stylesheet"> 
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+        />
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/fonts/RobotoSlab-VariableFont_wght.ttf"> -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&family=STIX+Two+Math&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/default.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Responsive-->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+        <!-- fevicon -->
+        <link rel="icon" href="images/fevicon.png" type="image/gif" />
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        <!-- Tweaks for older IEs-->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+  crossorigin="anonymous"
+/>
+        <!--==== Google Fonts ====-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+        <!--==== Bootstrap css file ====-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--==== Font-Awesome css file ====-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!-- Owl Carusel css file -->
+        <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.min.css">
+        <!-- ====video poppu css==== -->
+        <link rel="stylesheet" href="assets/plugins/Magnific-Popup/magnific-popup.css">
+        <!--==== Style css file ====-->
+
+        <link href="
+https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css
+" rel="stylesheet">
+        <style>
+            .ModalImage{
+                height: 150px;
+                width: 250px;
+            }
+            .none{
+                display: none;
+            }
+            .block{
+                display: block;
+            }
+            .error{
+                color:RED;
+            }
+            .like{
+                color: RED;
+                cursor: pointer;
+                font-size: xxx-large;
+            }
+            .dis-like{
+                font-size: xxx-large;
+            }
+            .point{
+                cursor: pointer;
+            }
+            .required{
+                color: RED;
+            }
+            .shortA{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .css-2b097c-container {
+                position: relative;
+                box-sizing: border-box;
+                padding: 8px;
+                border: none;
+            }
+            .css-yk16xz-control{
+                border:0px !important;
+            }
+            #login:focus, #login:active {
+                color: #2260b6;
+                border: 1px solid #2260b6;
+                box-shadow: 5px 10px 18px #2260b6;
+            }
+            #focus{
+                animation: blink-animation 1s steps(5, start) infinite;
+                -webkit-animation: blink-animation 1s steps(5, start) infinite;
+            }
+            @keyframes blink-animation {
+              to {
+                visibility: hidden;
+              }
+            }
+            @-webkit-keyframes blink-animation {
+              to {
+                visibility: hidden;
+              }
+            }
+            .multioptionselect{
+                border: 1px solid;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body class="bg-white modal-blur">
+        <div id="root"></div>
+
+        <div id="aa-preloader-area">
+            <div class="pulse"></div>
+        </div>
+         
+        
+
+
+        </script>
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+         <script src="js/jquery.min.js"></script>
+         <script src="js/popper.min.js"></script>
+         <script src="js/bootstrap.bundle.min.js"></script>
+         <script src="js/jquery-3.0.0.min.js"></script>
+         <script src="js/plugin.js"></script>
+         <!-- sidebar -->
+         <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+         <script src="js/custom.js"></script>
+         <script src="js/owl.carousel.min.js"></script>
+         <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+         <script src="assets/js/jquery-3.3.1.min.js"></script>
+         <script src="
+https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js
+"></script>
+
+             <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <!-- ==== Bootstrap js file==== -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- ==== JQuery Waypoint js file==== -->
+        <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+        <!-- ==== Parsley js file==== -->
+        <script src="assets/plugins/parsley/parsley.min.js"></script>
+        <!-- ==== parallax js==== -->
+        <script src="assets/plugins/parallax/parallax.js"></script>
+        <!-- ==== Owl Carousel js file==== -->
+        <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+        <!-- ==== Menu  js file==== -->
+        <script src="assets/js/menu.min.js"></script>
+        <!-- ===video popup=== -->
+        <script src="assets/plugins/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+        <!-- ====Counter js file=== -->
+        <script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
+        <!-- ==== Script js file==== -->
+        <script src="assets/js/scripts.js"></script>
+        <!-- ==== Custom js file==== -->
+        <script src="assets/js/custom.js"></script>
+        
+         <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 2
+                  },
+                  1000: {
+                    items: 3
+                  }
+                }
+              })
+            })
+         </script>
+         
+         <script>
+            $('.content').hide();
+            
+            $('.slider').click(function() {
+            $(this).next('.content').slideToggle();
+            this.toggle = !this.toggle;
+            $(this).children("span").text(this.toggle ? "-" : "+");
+            return false;
+            });
+         </script>
+         <script>
+             (function($) {
+        "use strict";
+
+
+            /* 01: Main menu
+            ==============================================*/
+
+            $('.header-menu a[href="#"]').on('click', function(event) {
+                event.preventDefault();
+            });
+
+            $(".header-menu").menumaker({
+                title: '<i class="fa fa-bars"></i>',
+                format: "multitoggle"
+            });
+
+            var mainHeader = $('.main-header');
+
+            if($(window).scrollTop() > 100) $('.main-header').addClass('sticky fadeInDown')
+            $(window).on('scroll', function(e){
+                if($(this).scrollTop() < 100){
+                    $('.main-header').removeClass('sticky fadeInDown')
+                }else
+                    $('.main-header').addClass('sticky fadeInDown')        
+                });
+
+            /* 02: Background image
+            ==============================================*/
+
+            var bgImg = $('[data-bg-img]');
+
+            bgImg.css('background', function(){
+                return 'url(' + $(this).data('bg-img') + ') center center';
+            });
+
+
+
+
+            /* 03: Parsley form validation
+            ==============================================*/
+
+            $('.parsley-validate, .parsley-validate form').parsley();
+
+            /*============================================
+                04: Back to top button
+            ==============================================*/
+
+        var $backToTopBtn = $('.back-to-top');
+
+        if ($backToTopBtn.length) {
+            var scrollTrigger = 400, // px
+            backToTop = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $backToTopBtn.addClass('show');
+                } else {
+                    $backToTopBtn.removeClass('show');
+                }
+            };
+
+            backToTop();
+
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+
+            $backToTopBtn.on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+
+/*==========================================
+    14: feature-carousel
+===========================================*/
+
+$('.feature-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    center: true,
+    dots:true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    responsive: {
+        0: {
+            items: 1,
+            
+        },
+        575: {
+            items: 1,
+            
+        },
+        768: {
+            items: 2
+        },
+        991: {
+            items: 2
+        },  
+        992: {
+            items: 3
+        }
+    }
+})
+
+/* =================================================
+    app carousel
+================================================= */
+
+    $('.app-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        center: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            575: {
+                items: 1
+            },
+            700: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+    /*=============================================
+        05: Changing svg color
+    ==============================================*/
+
+    jQuery('img.svg').each(function(){
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+    
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+    
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+    
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+            
+            // Check if the viewport is set, else we gonna set it if we can.
+            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
+            }
+    
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+    
+        }, 'xml');
+    });
+
+        /*=============================================
+            06: Ajax Contact Form
+        ==============================================*/
+
+      
+         $('.contact-form').on('submit', 'form', function(e) {
+            e.preventDefault();
+
+            var $el = $(this);
+
+            $.post($el.attr('action'), $el.serialize(), function(res){
+                res = $.parseJSON( res );
+                $el.parent('.contact-page-form').find('.form-response').html('<span>' + res[1] + '</span>');
+            });
+        });
+      
+    
+    /*============================================
+        07: Preloader
+    ==============================================*/
+
+    $(window).on('load', function(){
+
+        function removePreloader() {
+            var preLoader = $('.preLoader');
+            preLoader.fadeOut();
+        }
+        setTimeout(removePreloader, 250);
+    });
+
+
+    /* 08: Content animation
+    ==============================================*/
+
+    $(window).on('load', function(){
+
+        var $animateEl = $('[data-animate]');
+
+        $animateEl.each(function () {
+            var $el = $(this),
+                $name = $el.data('animate'),
+                $duration = $el.data('duration'),
+                $delay = $el.data('delay');
+
+            $duration = typeof $duration === 'undefined' ? '0.6' : $duration ;
+            $delay = typeof $delay === 'undefined' ? '.1' : $delay ;
+
+            $el.waypoint(function () {
+                $el.addClass('animated ' + $name)
+                   .css({
+                        'animation-duration': $duration + 's',
+                        'animation-delay': $delay + 's'
+                   });
+            }, {offset: '93%'});
+        });
+    });
+ 
+    /*=========================================================
+        09: counter up
+    =========================================================*/
+           $('.counter').counterUp({});
+        
+    /*====================================================
+        10: Parallax
+    ====================================================*/
+        var $parallaxLayers = $('[data-trigger="parallax_layers"]');
+
+        if( $parallaxLayers.length ){
+            $parallaxLayers.each(function () {
+                new Parallax( $(this)[0], {
+                    selector: '[data-depth]'
+                });
+            });
+        }
+  
+
+
+    /* 16: video popup */
+        var t = $(".video-btn");
+        t.length && t.magnificPopup({
+            type: "iframe"
+        })
+
+        // parice tabele
+        $('.single-price-plan').on('mouseenter', function(){
+            $(this).addClass('active').parent().siblings().find('.single-price-plan').removeClass('active');
+        })
+        
+ /*=====================================================
+    13: partner carousel
+=====================================================*/
+        $('.partner-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            autoplay:true,
+            autoplayTimeout:4000,
+            autoplaySpeed:3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                500: {
+                    items: 3
+                },
+                768: {
+                    items: 4
+                },
+                992: {
+                    items: 5
+                }
+            }
+        })
+
+        /* scroll */
+
+        $(".header-menu ul li a").on("click", function(t) {
+            var c = $(this.hash);
+            if(c.length !==0 ){
+                $("html,body").animate({
+                    scrollTop: c.offset().top
+                }, 700);
+            }
+        })
+
+        /* testimonial */
+/*=====================================================
+   13: partner carousel
+=====================================================*/
+        let author = $('.author-carousel')
+        author.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            center:true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                500: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                }
+            }
+        })
+
+        let author_cumment = $('.author-comment-carousel');
+        author_cumment.owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left">', '<i class="fa fa-angle-right">'],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                500: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                }
+            }
+        });
+
+           $('.author-comment-carousel .owl-next').on('click', function () {
+               $('.author-carousel .owl-next').click()
+           });
+
+           $('.author-comment-carousel .owl-prev').on('click', function () {
+               $('.author-carousel .owl-prev').click()
+           });
+
+        // banner 2 logo bgs
+        $(window).on('resize', () =>{
+            if ($(window).width() >= 975 ){
+                $('.main-header.header-2 .logo .main-logo2').attr('src', 'assets/img/logo2.png')
+            } else if ($(window).width() <=975) {
+                $('.main-header.header-2 .logo .main-logo2').attr('src', 'assets/img/logo.png')
+            }
+        })
+        if ($(window).width() >=975) {
+            $('.main-header.header-2 .logo .main-logo2').attr('src', 'assets/img/logo2.png')
+        } else if ($(window).width() <=975){
+            $('.main-header.header-2 .logo .main-logo2').attr('src', 'assets/img/logo.png')
+        } 
+
+
+})(jQuery);
+         </script>
+    </body>
+</html>
